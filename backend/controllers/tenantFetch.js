@@ -34,6 +34,11 @@ const checkResponseDataIsJson = (response) => {
   return responseData
 }
 
+/**
+ *
+ * @param {Object} responseData
+ * @returns Answer string from the response
+ */
 const checkAnswersResponse = (responseData) => {
   const checkResponse = responseData.response
     ? responseData.response
@@ -46,6 +51,8 @@ const checkAnswersResponse = (responseData) => {
 
 /**
  * Start Scrape Meta Information from the sources
+ * @param {string} url
+ * @returns Title of Article or Link
  */
 const createTitle = (url) => {
   const splitSource = url.split("/")
@@ -64,44 +71,51 @@ const createTitle = (url) => {
   return title.join(" ")
 }
 
+/**
+ * Create structured array of source objects
+ * @param {Array} sources
+ * @returns Array of structured Source Objects (sitename, title, url, image)
+ */
+const buildSources = (sources) => {
+  const sourcesArr = []
+  for (const source of sources) {
+    const currentSource = {}
+    currentSource.siteName = source.title
+    currentSource.url = source.source
+    currentSource.image = `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${currentSource.url}&size=16`
+    currentSource.title = createTitle(currentSource.url)
+    sourcesArr.push(currentSource)
+  }
+  return sourcesArr
+}
+
 const tenantFetch = async (req, res) => {
   const { question, session } = req.body
   const payload = {
     query: question,
   }
   try {
-    const response = doAxiosRequest(session, payload)
+    const response = await doAxiosRequest(session, payload)
     //   parse the JSON response
     let responseData = checkResponseDataIsJson(response)
-    console.log("responseData = ", responseData)
+    // console.log("responseData = ", responseData)
     const checkResponse = checkAnswersResponse(responseData)
-    console.log("The res ", checkResponse)
+    // console.log("The res ", checkResponse)
     if (checkResponse.includes("I cannot answer that") && session == "True") {
       // rerun the query to Serp using `session=False`
       console.log("rerun")
-      const newResponse = await axios.request(getConfig("False"))
-      responseData = JSON.parse(newResponse.data.response)
+      const newResponse = await doAxiosRequest("False", payload)
+      // console.log("new Response", newResponse.data)
+      responseData = checkResponseDataIsJson(newResponse)
     }
     console.log("\n\nResponse-\n\n####", responseData)
     // build sources
-    const sources = []
+    let sources = []
     // ensure sources exist
     if (responseData.sources) {
-      for (const source of responseData.sources) {
-        const currentSource = {}
-        currentSource.siteName = source.title
-        currentSource.url = source.source
-        currentSource.image = `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${currentSource.url}&size=16`
-        currentSource.title = createTitle(currentSource.url)
-        sources.push(currentSource)
-      }
+      sources = buildSources(responseData.sources)
     }
 
-    // const scrapeResponse = await axios.request(scrapeConfig)
-    // console.log(scrapeResponse.data)
-    /**
-     * End - Scrape source data from response
-     */
     res.status(200).json({
       responseData: responseData.answer,
       sources: sources,

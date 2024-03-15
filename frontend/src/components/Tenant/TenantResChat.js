@@ -119,8 +119,8 @@ const TenantResChat = ({
       )}
       {chatArray?.map((chat, index) => (
         <>
-          <div className="flex " key={index}>
-            <div className={"w-[90%] mb-10"}>
+          <div className="flex ">
+            <div className={"w-[90%] mb-10"} key={index}>
               <div
                 className="flex gap-2 mb-1 mt-2"
                 style={{ alignItems: "center", marginLeft: "-30px" }}
