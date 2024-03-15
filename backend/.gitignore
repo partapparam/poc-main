@@ -1,0 +1,5 @@
+node_modules
+backend/public/storage/*
+/backend/public/storage/*
+/logs/
+environments/environment.js

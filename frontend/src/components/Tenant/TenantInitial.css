@@ -1,0 +1,54 @@
+.ant-btn:hover::after {
+  content: attr(hover-data);
+  position: absolute;
+  font-size: 12px;
+  /* background-color: black; */
+  color: grey;
+  padding: 3px;
+  border-radius: 4px;
+  /* opacity: 0.4; */
+  z-index: 9999;
+  white-space: nowrap;
+  top: 30px;
+}
+
+.selectedButton {
+  background-color: #609da1; /* Change this color as per your requirement */
+  color: white; /* Change this color as per your requirement */
+  border-radius: 10px;
+}
+
+.audResearchTextArea {
+  resize: none;
+  border-bottom: none !important;
+  color: black !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.whiteText {
+  color: white !important;
+}
+
+.audResearchTextArea:focus,
+.audResearchTextArea:hover {
+  border-color: #4b9da1 !important;
+  /* box-shadow: 0 0 0 2px #ADECF0 !important; */
+  box-shadow: none !important;
+}
+
+.audResearchTextBottom {
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.divFocused {
+  border: 1px solid #4b9da1;
+  border-radius: 6px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

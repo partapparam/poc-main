@@ -1,0 +1,9 @@
+.allCards:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 27px rgb(0 0 0 / 10%);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.agentCard > .ant-card-body {
+    padding: 15px;
+}

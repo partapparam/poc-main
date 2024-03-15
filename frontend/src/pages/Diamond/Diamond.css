@@ -1,0 +1,58 @@
+.calculateFormLabel .ant-form-item-row .ant-form-item-label {
+    text-align: center !important;
+}
+
+.calculateFormLabel {
+    box-shadow: 0 20px 27px rgba(0, 0, 0, 0.7) !important;
+}
+  
+.calculateFormLabel .ant-form-item-row .ant-form-item-label > label{
+    color: white !important;
+}
+
+.calculateFormLabel .ant-input {
+    color: black !important;
+    font-weight: 400 !important;
+    height: 32px !important;
+}
+
+.selectLabelMargin .ant-form-item-row .ant-form-item-label {
+    margin-right: 0.3rem;
+}
+
+.calculateBtnContainer .ant-btn {
+    color: white !important;
+    background-color: #609DA1 !important;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    padding: 1.5rem 2rem !important;
+}
+
+.calculateBtn {
+    box-shadow: 0 20px 27px rgba(0, 0, 0, 0.4) !important;
+    border-color: #609DA1;
+}
+
+.calculateBtn:hover,
+.calculateBtn:disabled {
+    background-color: #609DA1 !important;
+    color: white !important;
+    border-color: #609DA1 !important;
+}
+
+.priceCard {
+    box-shadow: 0 20px 27px rgba(0, 0, 0, 0.4) !important;
+    border-color: #609DA1;
+}
+
+.titleMargin {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.calculateFormLabel .ant-row {
+    margin: 0 !important;
+}
+
+/* TAILWIND STYLES */
+

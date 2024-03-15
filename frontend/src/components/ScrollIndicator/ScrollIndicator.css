@@ -1,0 +1,12 @@
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #8f8f8f;
+    background-color: #066984;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+}

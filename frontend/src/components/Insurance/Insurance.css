@@ -1,0 +1,259 @@
+.insurance-container {
+    margin: 0 10px;
+    display: flex;
+    gap: 30px;
+    height: 95%;
+}
+
+.insurance-sidebar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 0 0 265px;
+    width: 40%;
+}
+
+.insurance-chat-header2 {
+    margin-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.insurance-prompt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    /* min-height: 350px;
+    max-height: 400px; */
+    overflow-y: scroll;
+}
+
+.insurance-prompts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* width: 100%; */
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+.insurance-prompts:hover {
+    background-color: #88b3b5;
+    color: white;
+}
+
+.insurance-prompts:hover .insurance-prompt {
+    color: snow;
+}
+
+.insurance-prompt {
+    width: 100%;
+    /* font-size: 1rem; */
+    line-height: 1rem;
+    color: #8c8c8c;
+    font-weight: 700;
+}
+
+.insurance-active {
+    background-color: #609da1 !important;
+    color: white;
+}
+
+.custom-messageIcon{
+    font-size: 16px;
+}
+
+.insurance-promptActive {
+    color: white;
+}
+
+.insurance-chat-header2 {
+    margin-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.talkToData-container{
+    overflow: hidden !important;
+}
+
+.horizontal-line {
+    width: 2px;
+    background-color: #bebaba;
+}
+
+.insurance-chat-container {
+    width: 100%;
+}
+
+.insurance-chat-header {
+    margin-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 650;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.insurance-chat-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.insurance-chat-image {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.insurance-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.insurance-content-chat-container {
+    max-height: 600px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.insurance-content-input-container {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.insurance-content-input {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px 20px;
+    padding-right: 50px;
+    /* font-weight: bolder;
+    font-style: italic; */
+}
+
+.insurance-content-btn {
+    box-shadow: none !important;
+    border-color: transparent !important;
+    border-right: 1px solid #d9d9d9 !important;
+    /* border-bottom: 1px solid #d9d9d9 !important; */
+    position: absolute;
+    right: 0;
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    height: 100%;
+    padding: 0 15px !important;
+    color: #609da1;
+    height: 44px;
+    z-index: 1;
+  }
+  
+.insurance-content-btn svg {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+  
+.insurance-content-btn:hover,
+.insurance-content-btn:focus {
+    color: white !important;
+    background-color: #609da1 !important;
+    border-color: #609da1 !important;
+}
+
+.ins-resp {
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ins-resp-signal {
+    padding-left: 5rem;
+    width: 70%;
+}
+
+.ins-resp-sub-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ins-resp-sub-text {
+    width: 100%;
+    font-size: 0.85rem;
+    text-align: start;
+}
+.ins-resp-dataInsight{
+    display: flex;
+    gap: 2rem;
+}
+.ins-resp-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ins-resp-data-bullet-points {
+    display: flex;
+    flex-direction: column;
+}
+
+.ins-resp-data-bp-container {
+    display: flex;
+    align-items: center;
+}
+
+.ins-resp-data-bp {
+    margin: 0 1rem 0 2rem;
+}
+
+.ins-resp-data-table {
+    margin-left: 3.5rem;
+    width: 65%;
+}
+
+.ins-resp-links {
+    margin-left: 4.5rem;
+}
+
+.ins-resp-link {
+    color: blue;
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
+
+.ins-resp-extra-m-left {
+    margin-left: 4rem;
+}
+
+.ins-bold {
+    font-weight: bold;
+}
+
+.ins-resp-signal .ant-table-thead th{
+    background-color: #8db1bf !important;
+}
+
+.resp-table-content {
+    @apply border-[1px] border-solid border-[#ddd] text-left p-[16px] text-[14px];
+}

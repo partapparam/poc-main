@@ -1,0 +1,15 @@
+.demoAppTable .ant-table-thead >tr>th{
+    color: #ffffff;
+    background-color: #609DA1;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    /* border: 1px black solid; */
+}
+.demoAppTable .ant-table-tbody > tr > td{
+    color: black !important;
+    background-color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
