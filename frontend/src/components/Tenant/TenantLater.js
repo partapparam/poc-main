@@ -398,9 +398,10 @@ const TenantLater = ({
         </div>
       ) : (
         <div className="w-[50%] absolute bottom-[5%] left-[25%]">
-          <div className="border border-[#4B9DA1] bg-[#4B9DA1] rounded-full p-1">
+          {/* <div className="border border-[#4B9DA1] bg-[#4B9DA1] rounded-full p-1"> */}
+          <div>
             <div
-              className={`border border-[#609DA1] shadow-xl rounded-full px-2 py-1 flex justify-between items-center bg-white`}
+              className={`border border-[#609DA1] shadow-sm hover:shadow-md focus:shadow-md rounded-full px-2 py-1 flex justify-between items-center bg-white`}
             >
               <div className="flex gap-5 justify-center items-center w-[80%]">
                 <PlusCircleOutlined
@@ -412,7 +413,7 @@ const TenantLater = ({
                   rows={rows}
                   onChange={handleInputChange}
                   placeholder="Ask follow-up..."
-                  className={`text-xl w-full laterTextArea blackText`}
+                  className={`text-lg w-full laterTextArea blackText`}
                   autoFocus
                   onKeyDown={(e) => {
                     if (e.key === "Enter" && !e.shiftKey) {

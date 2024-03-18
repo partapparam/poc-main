@@ -36,15 +36,7 @@ const TenantResChat = ({
     // console.log(text, result1);
     return result1 || result2
   }
-  // const saveLibrarydata = async (data) => {
-  //   let response = await addLibrary(data);
-  //   console.log(response);
-  //   if(response.status == 200 ){
-  //     console.log("Data Saved ");
-  //   } else {
-  //     console.log("error");
-  //   }
-  // }
+
   const suggestionButton = (question) => {
     setQuestion(question)
     setInputFilled(true)
@@ -60,9 +52,6 @@ const TenantResChat = ({
         })
       }, 500)
     }
-    // setTimeout(() => {
-    //   chatContentRef.current.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-    // }, 500)
     setCompleted(false)
   }, [chatArray])
   function renderLink(text) {
@@ -92,7 +81,7 @@ const TenantResChat = ({
           {linkText}
         </a>
       )
-      console.log(elements)
+      // console.log(elements)
       lastIndex = linkRegex.lastIndex
     }
 
@@ -125,7 +114,10 @@ const TenantResChat = ({
                 className="flex gap-2 mb-1 mt-2"
                 style={{ alignItems: "center", marginLeft: "-30px" }}
               >
-                <div style={{ height: "50px", width: "50px" }}>
+                <div
+                  style={{ height: "50px", width: "50px" }}
+                  className="flex place-items-center"
+                >
                   <Avatar
                     src={
                       localStorage.getItem("profile_url")
@@ -134,15 +126,15 @@ const TenantResChat = ({
                     }
                   ></Avatar>
                 </div>
-                <div className="text-2xl ml-2">{chat?.question}</div>
+                <div className="text-xl">{chat?.question}</div>
               </div>
               <div className="flex items-center gap-2.5 mt-6 mb-2">
-                <AlignLeftOutlined style={{ fontSize: "24px" }} />
+                <AlignLeftOutlined style={{ fontSize: "16px" }} />
                 <div
                   ref={
                     index === chatArray.length - 1 ? latestQuestionRef : null
                   }
-                  className="flex justify-center items-center text-2xl pb-0.5"
+                  className="flex justify-center font-bold items-center pb-0.5"
                 >
                   Answer
                 </div>
@@ -204,8 +196,8 @@ const TenantResChat = ({
                   chat?.sources?.some(Boolean) && (
                     <>
                       <div className="flex items-center gap-2.5 mb-2">
-                        <DatabaseOutlined style={{ fontSize: "24px" }} />
-                        <div className="flex justify-center items-center text-2xl pb-0.5">
+                        <DatabaseOutlined style={{ fontSize: "16px" }} />
+                        <div className="flex justify-center items-center font-bold pb-0.5">
                           Sources
                         </div>
                       </div>
@@ -242,7 +234,7 @@ const TenantResChat = ({
                                       <LinkOutlined
                                         style={{
                                           color: "black",
-                                          fontSize: "20px",
+                                          fontSize: "16px",
                                         }}
                                       />
                                     )}
